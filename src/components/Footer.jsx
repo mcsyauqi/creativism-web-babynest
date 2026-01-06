@@ -5,8 +5,7 @@ import {
   Mail,
   Phone,
   MapPin,
-  Heart,
-  Send
+  Heart
 } from 'lucide-react';
 
 const Footer = () => {
@@ -44,54 +43,21 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-b from-white to-pink-50">
-      {/* Newsletter Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="bg-gradient-to-r from-pink-soft to-lavender-soft rounded-3xl p-8 md:p-12 text-center text-white relative overflow-hidden">
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-4 left-4 w-20 h-20 border-4 border-white rounded-full"></div>
-            <div className="absolute bottom-4 right-4 w-32 h-32 border-4 border-white rounded-full"></div>
-            <div className="absolute top-1/2 left-1/4 w-16 h-16 border-4 border-white rounded-full"></div>
-          </div>
-          <div className="relative z-10">
-            <h3 className="font-heading text-2xl md:text-3xl font-bold mb-2">
-              Dapatkan Tips Parenting & Promo Eksklusif
-            </h3>
-            <p className="text-white/90 mb-6 max-w-xl mx-auto">
-              Subscribe newsletter kami dan dapatkan diskon 10% untuk pembelian pertama!
-            </p>
-            <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Email Anda"
-                className="flex-1 px-6 py-3 rounded-full text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white"
-              />
-              <button
-                type="submit"
-                className="bg-white text-pink-500 hover:bg-pink-100 px-8 py-3 rounded-full font-semibold transition-colors flex items-center justify-center gap-2"
-              >
-                <Send className="w-4 h-4" />
-                Subscribe
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-
+    <footer className="bg-gradient-to-b from-cream to-cream-dark">
       {/* Main Footer */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-pink-soft to-lavender-soft rounded-full flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-brown rounded-full flex items-center justify-center shadow-md">
                 <Baby className="w-6 h-6 text-white" />
               </div>
-              <span className="font-heading text-2xl font-bold bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
+              <span className="font-heading text-2xl font-bold text-gradient">
                 BabyNest
               </span>
             </Link>
-            <p className="text-gray-600 mb-4 text-sm">
+            <p className="text-tan mb-6 text-sm leading-relaxed">
               Lembut untuk Si Kecil, Tenang untuk Bunda. Pakaian bayi premium dengan 100% katun organik untuk kulit sensitif.
             </p>
             <div className="flex gap-3">
@@ -101,7 +67,7 @@ const Footer = () => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-pink-100 hover:bg-pink-soft hover:text-white rounded-full flex items-center justify-center text-pink-500 transition-all"
+                  className="w-10 h-10 bg-brown-light/20 hover:bg-brown-primary hover:text-white rounded-full flex items-center justify-center text-brown-primary transition-all"
                   title={social.name}
                 >
                   <social.icon />
@@ -112,13 +78,13 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-heading font-bold text-gray-800 mb-4">Quick Links</h4>
-            <ul className="space-y-2">
+            <h4 className="font-heading font-bold text-brown-dark mb-5">Quick Links</h4>
+            <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.path}>
                   <Link
                     to={link.path}
-                    className="text-gray-600 hover:text-pink-500 transition-colors text-sm"
+                    className="text-tan hover:text-brown-primary transition-colors text-sm"
                   >
                     {link.name}
                   </Link>
@@ -129,13 +95,13 @@ const Footer = () => {
 
           {/* Help Links */}
           <div>
-            <h4 className="font-heading font-bold text-gray-800 mb-4">Bantuan</h4>
-            <ul className="space-y-2">
+            <h4 className="font-heading font-bold text-brown-dark mb-5">Bantuan</h4>
+            <ul className="space-y-3">
               {helpLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.path}
-                    className="text-gray-600 hover:text-pink-500 transition-colors text-sm"
+                    className="text-tan hover:text-brown-primary transition-colors text-sm"
                   >
                     {link.name}
                   </Link>
@@ -146,18 +112,24 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-heading font-bold text-gray-800 mb-4">Hubungi Kami</h4>
-            <ul className="space-y-3">
-              <li className="flex items-center gap-3 text-gray-600 text-sm">
-                <Phone className="w-4 h-4 text-pink-500" />
+            <h4 className="font-heading font-bold text-brown-dark mb-5">Hubungi Kami</h4>
+            <ul className="space-y-4">
+              <li className="flex items-center gap-3 text-tan text-sm">
+                <div className="w-8 h-8 bg-brown-light/20 rounded-lg flex items-center justify-center">
+                  <Phone className="w-4 h-4 text-brown-primary" />
+                </div>
                 <span>0812-BABY-NEST</span>
               </li>
-              <li className="flex items-center gap-3 text-gray-600 text-sm">
-                <Mail className="w-4 h-4 text-pink-500" />
+              <li className="flex items-center gap-3 text-tan text-sm">
+                <div className="w-8 h-8 bg-brown-light/20 rounded-lg flex items-center justify-center">
+                  <Mail className="w-4 h-4 text-brown-primary" />
+                </div>
                 <span>hello@babynest.id</span>
               </li>
-              <li className="flex items-start gap-3 text-gray-600 text-sm">
-                <MapPin className="w-4 h-4 text-pink-500 mt-0.5" />
+              <li className="flex items-start gap-3 text-tan text-sm">
+                <div className="w-8 h-8 bg-brown-light/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-4 h-4 text-brown-primary" />
+                </div>
                 <span>Jl. Cinta Kasih No. 123<br />Jakarta Selatan, 12345</span>
               </li>
             </ul>
@@ -166,26 +138,26 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-pink-100">
+      <div className="border-t border-beige">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-gray-500 text-sm text-center md:text-left">
+            <p className="text-tan text-sm text-center md:text-left">
               © 2024 BabyNest. All rights reserved. Created with{' '}
-              <Heart className="w-4 h-4 inline text-pink-500" /> by{' '}
+              <Heart className="w-4 h-4 inline text-brown-primary" /> by{' '}
               <a
                 href="https://creativism.id"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-pink-500 hover:underline"
+                className="text-brown-primary hover:underline font-medium"
               >
                 Creativism
               </a>
             </p>
-            <div className="flex items-center gap-6 text-sm text-gray-500">
-              <Link to="/faq" className="hover:text-pink-500 transition-colors">
+            <div className="flex items-center gap-6 text-sm text-tan">
+              <Link to="/faq" className="hover:text-brown-primary transition-colors">
                 Privacy Policy
               </Link>
-              <Link to="/faq" className="hover:text-pink-500 transition-colors">
+              <Link to="/faq" className="hover:text-brown-primary transition-colors">
                 Terms of Service
               </Link>
             </div>
